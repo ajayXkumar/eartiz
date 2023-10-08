@@ -1,5 +1,5 @@
 .cart {
-  color:white;
+  color:rgb(0, 0, 0);
   width: 100%;
   padding: 20px;
   padding-top: 100px;
@@ -39,8 +39,8 @@
 }
 
 .quantity-button {
-  background-color: #060606;
-  color: #fff;
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -52,7 +52,7 @@
 }
 
 .quantity-button:hover {
-  background-color: #3b3b3b;
+  background-color: #0059b8;
 }
 
 .total-price {
@@ -62,8 +62,8 @@
 }
 
 .checkout-button {
-  background-color: #0c0c0c;
-  color: #fff;
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 8px 16px;
@@ -74,5 +74,5 @@
 }
 
 .checkout-button:hover {
-  background-color: #121212;
+  background-color: #005fc5;
 }

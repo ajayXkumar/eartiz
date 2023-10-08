@@ -1,0 +1,40 @@
+  .login-css{
+    
+    padding-top: 300px;
+  }
+
+  .second,.name,
+  .email {
+    color: rgb(255, 255, 255);
+    width: 400px;
+    height: 35px;
+    padding: 7px;
+    margin: 15px  auto;
+    display: block;
+    border: none;
+    
+  }
+  
+  .submit-button {
+    width: 400px;
+    height: 40px;
+    border-radius: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+    color: #0f102c;
+    font-weight: bold;
+  }
+  
+  .switch-button{
+    width: 400px;
+    height: 40px;
+    border-radius: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: bold;
+  }

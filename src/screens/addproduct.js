@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-
+import "./add.css"
 const Addproduct = () => {
   const [createpro, setPro] = useState({
     name: '',
@@ -40,7 +40,7 @@ const Addproduct = () => {
   };
 
   return (
-    <div>
+    <div className='add'>
       <form onSubmit={productSubmit}>
         <label>Product Name:</label>
         <input
