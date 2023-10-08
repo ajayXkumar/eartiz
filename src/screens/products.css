@@ -65,6 +65,13 @@
 /* Mobile styles */
 
 @media (max-width: 767px) {
+
+  .hero {
+    background-image: url('../../public/images/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 250px;
+  }
     
   .one-product {
     width: 100px;
@@ -104,5 +111,46 @@
   font-size: 0.8rem;
   cursor: pointer;
   width: 100px;
+}
+}
+
+@media (max-width: 400px) {
+  .one-product {
+    width: 80px;
+    margin: 10px;
+    height: 180px;
+    margin-top: 100px;
+    background: #00060E;
+  }
+  
+.img {
+  margin-bottom: 2px;
+  max-width: 100%;
+  height: auto;
+}
+
+.image {
+  height: 140px;
+}
+
+.details {
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 200;
+}
+
+.itname {
+  font-size: 0.5rem;
+  margin-bottom: 5px;
+}
+
+.addbtn {
+  background-color: #3e5662;
+  color: black;
+  border: none;
+  padding: 3px 6px;
+  font-size: 0.5rem;
+  cursor: pointer;
+  width: 80px;
 }
 }
