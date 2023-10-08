@@ -8,7 +8,7 @@ const Product = () => {
   const [arts, setarts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/products') 
+    axios.get('https://ecombackend-orf4.onrender.com/api/products') 
       .then((response) => setarts(response.data))
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
