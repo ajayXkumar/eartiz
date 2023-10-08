@@ -28,8 +28,11 @@ const Signup = () => {
   const handlesubmit =(e)=>{
       e.preventDefault()
       if(name!=null && email!=null && password!=null){
-      axios.post('http://localhost:8000/register' ,{name,email,password})
-      .then(result=>console.log(result))
+      axios.post('https://ecombackend-orf4.onrender.com/api/register' ,{name,email,password})
+      .then(result=>{
+        window.alert(result.data.message)
+        console.log(result)
+      })
       .catch(error=>console.log(error)) 
       }
   }

@@ -28,15 +28,20 @@ const Login = () => {
 
   const handlesubmit=(e)=>{
     e.preventDefault()
-    axios.post('http://localhost:8000/login' ,{email,password})
+    axios.post('https://ecombackend-orf4.onrender.com/api/login' ,{email,password})
     .then(result=> {
       console.log(result)
       if(result.data.message=="Login successful"){
         loginStatussetter(true); 
+        window.alert("login successfull")
         navigate("/")
       }
     })
-    .catch(error=>console.log(error))
+    .catch(error=>{
+      window.alert("your are not a registred user")
+      console.log(error)
+    }
+    )
   }
 
   return (

@@ -33,7 +33,7 @@ const Order = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    axios.post('http://localhost:8000/orders', formData)
+    axios.post('https://ecombackend-orf4.onrender.com/api/orders', formData)
       .then((response) => {
         console.log('Order placed successfully:', response.data);
         window.alert('Order placed successfully!'); 
