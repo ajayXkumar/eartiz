@@ -7,6 +7,7 @@ import Cart from "./screens/cart";
 import { CartProvider } from "./context/shopcartcontext";
 import User from './screens/user'
 import Addproduct from "./screens/addproduct";
+import Order from "./screens/order";
 function App() {
   
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route  path="/cart" element={<Cart/>}/>
           <Route  path="/Usermanager" element={<User/>}/>
           <Route path="/addproduct" element={<Addproduct/>}/>
+          <Route path="/order" element={<Order/>}/>
         </Routes>
 
     </div>

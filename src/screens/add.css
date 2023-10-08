@@ -25,6 +25,13 @@ form {
     border-radius: 3px;
   }
   
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
   button[type="submit"] {
     display: block;
     width: 100%;

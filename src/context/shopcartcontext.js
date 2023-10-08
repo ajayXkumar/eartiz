@@ -5,7 +5,13 @@ export const Cartcontext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItem, setCartItem] = useState([]);
   const [total,settotal] =useState(0);
- 
+  const[loginStatus ,setlogin]=useState(false);
+
+
+
+  const loginStatussetter=(value)=>{
+    setlogin(value)
+  }
   const localcart=(items)=>{
     setCartItem(items);
   }
@@ -66,7 +72,9 @@ export const CartProvider = ({ children }) => {
         cartItem,
         removeCart,
         total,
-        localcart
+        localcart,
+        loginStatussetter,
+        loginStatus
       }}
     >
       {children}

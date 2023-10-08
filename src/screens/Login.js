@@ -1,12 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useContext } from "react";
 import axios from "axios"
-import navigate from "react"
+import {useNavigate } from 'react-router-dom';
 import "./user.css"
+import { Cartcontext } from '../context/shopcartcontext';
+
 const Login = () => {
+
+  const {loginStatussetter,loginStatus} = useContext(Cartcontext);
 
   const [email, setemail] = useState();
   const [password, setpassword] = useState();
+  const navigate =useNavigate();
 
   const Handlepassword = (value) => {
     if (value != null) {
@@ -26,8 +31,9 @@ const Login = () => {
     axios.post('http://localhost:8000/login' ,{email,password})
     .then(result=> {
       console.log(result)
-      if(result.data==="success"){
-        navigate('/home')
+      if(result.data.message=="Login successful"){
+        loginStatussetter(true); 
+        navigate("/")
       }
     })
     .catch(error=>console.log(error))
@@ -42,7 +48,7 @@ const Login = () => {
           placeholder="email"
           name="email"
           onChange={(e) => {
-            setemail(e.target.value);
+            Handleemail(e.target.value);
           }}
         />
 
@@ -52,7 +58,7 @@ const Login = () => {
           placeholder="password"
           name="password"
           onChange={(e) => {
-            setpassword(e.target.value);
+            Handlepassword(e.target.value);
           }}
         />
         <button className="submit-button" type="submit">
